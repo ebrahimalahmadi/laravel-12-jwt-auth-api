@@ -3,6 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+//I Use apiPrefix: 'api/v1' in  middleware 
+
+
+// Test Route
+Route::get('test', function () {
+    return response()->json(['message' => 'API connected successfully']);
+});
